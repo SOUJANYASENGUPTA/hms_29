@@ -6,6 +6,9 @@ const nav = useNavigate();
 const Patient=()=>{
      nav("/Dashboard/Patient");
 }
+const staff=()=>{
+  nav("/Dashboard/Staff")
+}
 return(
 
 <div>    
@@ -69,7 +72,7 @@ return(
     </div>
     </div>
 
-    <div class="ag-courses_item">
+    <div class="ag-courses_item" onClick={staff}>
       <div class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 

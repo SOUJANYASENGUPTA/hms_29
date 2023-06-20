@@ -5,6 +5,7 @@ import Dash from './Dashboard';
 import { auth , firebase } from './firebase';
 import { BrowserRouter as Router,Route, Link , Routes ,Navigate} from "react-router-dom";
 import PatientManagement from './patient';
+import Dashboard from './Page/Dashboard/EmpDash';
 function App() {
   const [viewOtpForm, setViewOtpForm] = useState(false);
   const [ver,setVer] = useState(false);
@@ -97,6 +98,7 @@ return (
         </Route>
         <Route path="/Dashboard" element ={<Dash signOut={signOut} user={user}/>}></Route>
         <Route path = "/Dashboard/Patient" element={<PatientManagement/>}></Route>
+        <Route path = "/Dashboard/Staff" element={<Dashboard/>}></Route>
     </Routes>
 </Router>
     );

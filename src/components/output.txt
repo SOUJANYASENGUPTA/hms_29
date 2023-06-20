@@ -1,0 +1,33 @@
+Folder PATH listing for volume SSD
+Volume serial number is EA49-2D2A
+C:.
+|   App.css
+|   App.js
+|   index.css
+|   index.js
+|   output.txt
+|   reportWebVitals.js
+|   
++---data
+|       index.js
+|       
++---Page
+|   \---Dashboard
+|           Add.js
+|           Edit.js
+|           Header.js
+|           index.js
+|           List.css
+|           List.js
+|           payroll.js
+|           
+\---redux
+    |   index.js
+    |   rootReducer.js
+    |   store.js
+    |   
+    \---employee
+            employeeAction.js
+            employeeReducer.js
+            employeeTypes.js
+            
