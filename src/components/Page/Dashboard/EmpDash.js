@@ -90,7 +90,7 @@ function Dashboard() {
       {isScheduler && (
         <Scheduler setIsScheduler={setIsScheduler} />
       )}
-      
+      <img url='https://img.freepik.com/free-vector/group-doctors-standing-hospital-building-team-practitioners-ambulance-car_74855-14034.jpg?w=826&t=st=1687355197~exp=1687355797~hmac=029a1a0c09112d5b858db970849a1a09ba305fcf9e8c796c841f7fabe2a8a0b1'></img>
     </div>
   );
 }

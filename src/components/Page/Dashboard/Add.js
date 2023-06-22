@@ -62,9 +62,9 @@ function Add({ setIsAdding }) {
 
 
     return (
-        <div className="small-container">
+        <div className="small-container" style={{backgroundImage :`url('https://img.freepik.com/free-vector/abstract-triangle-mosaic-background-design_1164-1262.jpg?w=740&t=st=1687358804~exp=1687359404~hmac=0476bae461846e3163d806e8d0596b564a5dc27607433df5b09caaac33163c2f')` ,backgroundRepeat :'no-repeat',backgroundSize:'850px'}}>
             <form onSubmit={handleAdd}>
-                <h1>Add Employee</h1>
+                <h1 style={{marginTop :'15px', color:'white'}}>Add Employee</h1>
                 <label htmlFor="Name">Name</label>
                 <input
                     id="Name"

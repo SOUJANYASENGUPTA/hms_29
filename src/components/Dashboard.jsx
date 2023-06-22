@@ -11,14 +11,14 @@ const staff=()=>{
 }
 return(
 
-<div>    
+<div className='bodyc'>    
 <div class="ag-format-container">
-<button class="learn-more" onClick={signOut}>
-  <span class="circle" aria-hidden="true">
-  <span class="icon arrow"></span>
+<div className="buttonc learn-more" onClick={signOut}>
+  <span className="buttonc circle" aria-hidden="true">
+  <span className="buttonc icon arrow"></span>
   </span>
   <span class="button-text">Sign Out</span>
-</button>
+</div>
   <h1 align="center" style={{margin:"0.2px"}}>Welcome 👩🏼‍⚕️ {user.phoneNumber}</h1>
   <div class="ag-courses_box">
     <div class="ag-courses_item" onClick={Patient}>

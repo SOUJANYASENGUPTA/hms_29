@@ -35,7 +35,7 @@ function Scheduler({ setIsScheduler}) {
   };
 
   return (
-    <div>
+    <div style={{backgroundImage :`url('https://img.freepik.com/free-vector/abstract-background-with-wavy-lines_69286-196.jpg?w=996&t=st=1687358391~exp=1687358991~hmac=0060c2eb116904eddd9afb9f8098a1bf7df0428e738e8b814452c7750dbe8ffa')` ,backgroundRepeat :'no-repeat' ,margin:'30px' ,backgroundSize:'1400px'}} >
       <h2>Calendar Scheduler</h2>
       <div>
         <label htmlFor="name">Name:</label>
@@ -65,8 +65,8 @@ function Scheduler({ setIsScheduler}) {
         />
       </div>
 
-      <button onClick={handleAddEvent}>Add Event</button>
-      <button onClick={() => setIsScheduler(false)} className="btn btn-secondary mt-2">Cancel</button>
+      <button onClick={handleAddEvent} style={{padding:'10px' , margin: '10px'}}>Add Event</button>
+      <button onClick={() => setIsScheduler(false)} className="btn btn-secondary mt-2" style={{padding:'10px' , margin: '10px'}}>Cancel</button>
       <h3>Events:</h3>
       <ul>
         {events.map((event, index) => (

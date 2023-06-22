@@ -16,12 +16,12 @@ function Header({ setIsAdding, setIsPayroll, setIsScheduler }) {
 
     <header>
 
-      <h1 style={{marginTop :'30px' , fontWeight :'600'}}>Employee Management </h1>
+      <h1 style={{marginTop :'30px' , fontWeight :'600' ,color:"gray"}}>Employee Management </h1>
       <div style={{ marginTop: '30px', marginBottom: '18px'}}>
-        <button onClick={() => setIsAdding(true)} className='round-button' style={{ margin :'10px', margin :'10px', background : '#ffffff3f', color :"white", padding :'10px'}}>Add Employee</button>
-        <button onClick={handleOpenPayroll} className='round-button' style={{ margin :'10px', margin :'10px', background : '#ffffff3f', color :"white", padding :'10px'}}>Open Payroll</button>
-        <button onClick={handleOpenScheduler} className='round-button' style={{ margin :'10px', margin :'10px', background : '#ffffff3f', color :"white", padding :'10px'}}>Add Schedule</button>
-        <Link to="/Dashboard"  className='round-button' style={{ margin :'10px', marginLeft :'600px', background : '#ffffff3f', color :"white", padding :'10px' , fontWeight :'200', cursor: 'pointer',
+        <button onClick={() => setIsAdding(true)} className='round-button' style={{ margin :'10px', margin :'10px', background : 'teal', color :"white", padding :'10px'}}>Add Employee</button>
+        <button onClick={handleOpenPayroll} className='round-button' style={{ margin :'10px', margin :'10px', background : 'teal', color :"white", padding :'10px'}}>Open Payroll</button>
+        <button onClick={handleOpenScheduler} className='round-button' style={{ margin :'10px', margin :'10px', background : 'teal', color :"white", padding :'10px'}}>Add Schedule</button>
+        <Link to="/Dashboard"  className='round-button' style={{ margin :'10px', marginLeft :'600px', background : 'teal', color :"white", padding :'10px' , fontWeight :'200', cursor: 'pointer',
     transition: 'background-color 0.3s ease'}}>Back to Dashboard</Link>
         {/* <button onClick={Dashboard} className='round-button'>Back to Dashboard</button> */}
       </div>

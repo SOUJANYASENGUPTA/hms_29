@@ -60,7 +60,7 @@ function Edit({ selectedEmployee, setIsEditing }) {
     return (
         <div className="small-container">
             <form onSubmit={handleUpdate}>
-                <h1>Edit Employee</h1>
+                <h1 style={{color:"grey"}}>Edit Employee</h1>
                 <label htmlFor="Name">Name</label>
                 <input
                     id="Name"
