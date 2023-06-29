@@ -44,7 +44,7 @@ const RecordList = () => {
                 <div className="card-body">
                     <div className="divbtn">
                         <Link to="/create" className="btn btn-success mt-4 mb-4">Add New (+)</Link>
-                        <Link to="/Dashboard"  className='round-button' style={{ margin :'10px', marginLeft :'900px', background : 'teal', color :"white", padding :'10px' , fontWeight :'200', cursor: 'pointer',
+                        <Link to="/Dashboard"  className='round-button' style={{ margin :'10px', marginLeft :'700px', background : 'teal', color :"white", padding :'10px' , fontWeight :'200', cursor: 'pointer',
     transition: 'background-color 0.3s ease'}}>Back to Dashboard</Link>
                     </div>
                     

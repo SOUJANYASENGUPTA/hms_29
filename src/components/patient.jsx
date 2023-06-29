@@ -64,7 +64,7 @@ const PatientManagement = () => {
             (<Link to="/Dashboard/Patient" className='btn-back' onClick={handleBackToDashboard}>
             Back to Registration
             </Link>):(
-            <button className="btn-patients" onClick={() => setShowViewPatients(true)}>
+            <button className="btn-patients" style={{marginLeft :"1000px"}} onClick={() => setShowViewPatients(true)}>
               View Existing Patients
             </button>)}
           </div>
