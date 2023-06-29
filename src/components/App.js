@@ -10,6 +10,7 @@ import CreateRecord from './CreateRecord';
 import EditRecord from './EditRecord';
 import ViewRecord from './ViewRecord';
 import RecordList from './RecordList';
+import PharmacyRegistration from './Pharmacy';
 function App() {
   const [viewOtpForm, setViewOtpForm] = useState(false);
   const [ver,setVer] = useState(false);
@@ -104,6 +105,7 @@ return (
         <Route path = "/Dashboard/Patient" element={<PatientManagement/>}></Route>
         <Route path = "/Dashboard/Staff" element={<Dashboard/>}></Route>
         <Route path='/Dashboard/emr' element={<RecordList />}></Route>
+        <Route path='/Dashboard/pharmacy' element={<PharmacyRegistration/>}></Route>
         <Route path='/create' element={<CreateRecord />}></Route>
         <Route path='/view/:id' element={<ViewRecord />}></Route>
         <Route path='/edit/:id' element={<EditRecord />}></Route>

@@ -12,6 +12,9 @@ const staff=()=>{
 const emr=()=>{
   nav("/Dashboard/emr");
 }
+const pharm=()=>{
+  nav("/Dashboard/pharmacy")
+}
 return(
 
 <div className='bodyc'>    
@@ -86,7 +89,7 @@ return(
     </div>
 
 
-    <div class="ag-courses_item">
+    <div class="ag-courses_item" onClick={pharm}>
       <div class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 
