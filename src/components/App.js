@@ -6,6 +6,10 @@ import { auth , firebase } from './firebase';
 import { BrowserRouter as Router,Route, Link , Routes ,Navigate} from "react-router-dom";
 import PatientManagement from './patient';
 import Dashboard from './Page/Dashboard/EmpDash';
+import CreateRecord from './CreateRecord';
+import EditRecord from './EditRecord';
+import ViewRecord from './ViewRecord';
+import RecordList from './RecordList';
 function App() {
   const [viewOtpForm, setViewOtpForm] = useState(false);
   const [ver,setVer] = useState(false);
@@ -99,6 +103,11 @@ return (
         <Route path="/Dashboard" element ={<Dash signOut={signOut} user={user}/>}></Route>
         <Route path = "/Dashboard/Patient" element={<PatientManagement/>}></Route>
         <Route path = "/Dashboard/Staff" element={<Dashboard/>}></Route>
+        <Route path='/Dashboard/emr' element={<RecordList />}></Route>
+        <Route path='/create' element={<CreateRecord />}></Route>
+        <Route path='/view/:id' element={<ViewRecord />}></Route>
+        <Route path='/edit/:id' element={<EditRecord />}></Route>
+        <Route path="*" element={<h2>Page Not Found</h2>}></Route>
     </Routes>
 </Router>
     );

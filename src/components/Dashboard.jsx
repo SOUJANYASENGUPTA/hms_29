@@ -7,7 +7,10 @@ const Patient=()=>{
      nav("/Dashboard/Patient");
 }
 const staff=()=>{
-  nav("/Dashboard/Staff")
+  nav("/Dashboard/Staff");
+}
+const emr=()=>{
+  nav("/Dashboard/emr");
 }
 return(
 
@@ -41,7 +44,7 @@ return(
       </div>
     </div>
 
-    <div class="ag-courses_item">
+    <div class="ag-courses_item" onClick={emr}>
       <div class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 

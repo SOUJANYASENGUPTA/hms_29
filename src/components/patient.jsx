@@ -31,7 +31,7 @@ const PatientManagement = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/patients/add', newPatient);
+      await axios.post('http://localhost:8080/patient', newPatient);
       setNewPatient({
         id: '',
         name: '',
@@ -60,10 +60,10 @@ const PatientManagement = () => {
             <Link to="/Dashboard" className="btn-back" onClick={handleBackToDashboard}>
               Back to Dashboard
             </Link>
-            {showViewPatients ? (
-            <Link to="/Dashboard/Patient" className="btn-back" onClick={handleBackToDashboard}>
-              Back to Registration
-            </Link>) : (
+            {showViewPatients ?
+            (<Link to="/Dashboard/Patient" className='btn-back' onClick={handleBackToDashboard}>
+            Back to Registration
+            </Link>):(
             <button className="btn-patients" onClick={() => setShowViewPatients(true)}>
               View Existing Patients
             </button>)}
@@ -180,6 +180,7 @@ const PatientManagement = () => {
           <Route path="/patients" element={<ViewPatients />} />
         </Routes>
       </div>
+    
   );
 };
 
