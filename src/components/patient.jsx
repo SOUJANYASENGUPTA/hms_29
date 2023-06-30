@@ -19,8 +19,8 @@ const PatientManagement = () => {
     address: '',
     phone: '',
     email: '',
-    history: '',
-    treatment: ''
+    medicalHistory: '',
+    treatmentPlan: ''
   });
 
   const handleInputChange = (e) => {
@@ -40,8 +40,8 @@ const PatientManagement = () => {
         address: '',
         phone: '',
         email: '',
-        history: '',
-        treatment: ''
+        medicalHistory: '',
+        treatmentPlan: ''
       });
     } catch (error) {
       console.error('Error creating patient:', error);
@@ -60,11 +60,11 @@ const PatientManagement = () => {
             <Link to="/Dashboard" className="btn-back" onClick={handleBackToDashboard}>
               Back to Dashboard
             </Link>
-            {showViewPatients ?
-            (<Link to="/Dashboard/Patient" className='btn-back' onClick={handleBackToDashboard}>
-            Back to Registration
-            </Link>):(
-            <button className="btn-patients" style={{marginLeft :"1000px"}} onClick={() => setShowViewPatients(true)}>
+            {showViewPatients ? (
+            <Link to="/Dashboard/Patient" className="btn-back" onClick={handleBackToDashboard}>
+              Back to Registration
+            </Link>) : (
+            <button className="btn-patients" onClick={() => setShowViewPatients(true)}>
               View Existing Patients
             </button>)}
           </div>
@@ -149,8 +149,8 @@ const PatientManagement = () => {
                         />
                         <input
                           type="text"
-                          name="history"
-                          value={newPatient.history}
+                          name="medicalHistory"
+                          value={newPatient.medicalHistory}
                           onChange={handleInputChange}
                           placeholder="Medical History"
                           className="form-control"
@@ -158,8 +158,8 @@ const PatientManagement = () => {
                         />
                         <input
                           type="text"
-                          name="treatment"
-                          value={newPatient.treatment}
+                          name="treatmentPlan"
+                          value={newPatient.treatmentPlan}
                           onChange={handleInputChange}
                           placeholder="Treatment Plan"
                           className="form-control"
@@ -180,7 +180,6 @@ const PatientManagement = () => {
           <Route path="/patients" element={<ViewPatients />} />
         </Routes>
       </div>
-    
   );
 };
 
