@@ -107,8 +107,8 @@ const ViewPatients = () => {
                 <td>{patient.address}</td>
                 <td>{patient.phone}</td>
                 <td>{patient.email}</td>
-                <td>{patient.history}</td>
-                <td>{patient.treatment}</td>
+                <td>{patient.medicalHistory}</td>
+                <td>{patient.treatmentPlan}</td>
                 <td className='actions'>
                   {/* Edit button */}
                   <button onClick={() => openEditModal(patient)}>
@@ -131,9 +131,8 @@ const ViewPatients = () => {
               <div className='modal-content'>
                 <h2>Edit Patient Details</h2>
                 <form onSubmit={(e) => e.preventDefault()}>
-              <div>
-              <div>
-              <label htmlFor='id'>ID:</label>
+                <div>
+              <label htmlFor='age'>ID:</label>
               <input
                 type='text'
                 id='id'
@@ -141,6 +140,7 @@ const ViewPatients = () => {
                 onChange={(e) => setSelectedPatient({ ...selectedPatient, id: e.target.value })}
               />
             </div>
+              <div>
               <label htmlFor='name'>Name:</label>
               <input
                 type='text'
@@ -198,18 +198,18 @@ const ViewPatients = () => {
               <label htmlFor='history'>Medical History:</label>
               <input
                 type='text'
-                id='history'
-                value={selectedPatient.history}
-                onChange={(e) => setSelectedPatient({ ...selectedPatient, history: e.target.value })}
+                id='medicalHistory'
+                value={selectedPatient.medicalHistory}
+                onChange={(e) => setSelectedPatient({ ...selectedPatient, medicalHistory: e.target.value })}
               />
             </div>
             <div>
               <label htmlFor='treatment'>Treatment Plan:</label>
               <input
                 type='text'
-                id='treatment'
-                value={selectedPatient.treatment}
-                onChange={(e) => setSelectedPatient({ ...selectedPatient, treatment: e.target.value })}
+                id='treatmentPlan'
+                value={selectedPatient.treatmentPlan}
+                onChange={(e) => setSelectedPatient({ ...selectedPatient, treatmentPlan: e.target.value })}
               />
             </div>
             <button onClick={closeEditModal}>Cancel</button>
