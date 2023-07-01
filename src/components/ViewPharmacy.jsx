@@ -18,6 +18,7 @@ const ViewPharmacy = () => {
   }, []);
 
   const fetchPharmacies = async () => {
+    
     try {
       const response = await axios.get('http://localhost:8080/pharmacy');
       setPharmacies(response.data);
@@ -94,11 +95,11 @@ const ViewPharmacy = () => {
           <tbody>
             {pharmacies.map((pharmacy) => (
               <tr key={pharmacy.id}>
-                <td>{pharmacy.patientId}</td>
-                <td>{pharmacy.medicationName}</td>
+                <td>{pharmacy.patient_id}</td>
+                <td>{pharmacy.medication_name}</td>
                 <td>{pharmacy.dosage}</td>
-                <td>{pharmacy.refillDate}</td>
-                <td>{pharmacy.prescriptionNumber}</td>
+                <td>{pharmacy.refill_date}</td>
+                <td>{pharmacy.prescription_number}</td>
                 <td className='actions'>
                   {/* Edit button */}
                   <button onClick={() => openEditModal(pharmacy)}>
@@ -122,24 +123,24 @@ const ViewPharmacy = () => {
             <h2>Edit Pharmacy Details</h2>
             <form onSubmit={(e) => e.preventDefault()}>
               <div>
-                <label htmlFor='patientId'>Patient ID:</label>
+                <label htmlFor='patient_id'>Patient ID:</label>
                 <input
                   type='text'
-                  id='patientId'
-                  value={selectedPharmacy.patientId}
+                  id='patient_id'
+                  value={selectedPharmacy.patient_id}
                   onChange={(e) =>
-                    setSelectedPharmacy({ ...selectedPharmacy, patientId: e.target.value })
+                    setSelectedPharmacy({ ...selectedPharmacy, patient_id: e.target.value })
                   }
                 />
               </div>
               <div>
-                <label htmlFor='medicationName'>Medication Name:</label>
+                <label htmlFor='medication_name'>Medication Name:</label>
                 <input
                   type='text'
-                  id='medicationName'
-                  value={selectedPharmacy.medicationName}
+                  id='medication_name'
+                  value={selectedPharmacy.medication_name}
                   onChange={(e) =>
-                    setSelectedPharmacy({ ...selectedPharmacy, medicationName: e.target.value })
+                    setSelectedPharmacy({ ...selectedPharmacy, medication_name: e.target.value })
                   }
                 />
               </div>
@@ -153,22 +154,22 @@ const ViewPharmacy = () => {
                 />
               </div>
               <div>
-                <label htmlFor='refillDate'>Refill Date:</label>
+                <label htmlFor='refill_date'>Refill Date:</label>
                 <input
                   type='text'
-                  id='refillDate'
-                  value={selectedPharmacy.refillDate}
-                  onChange={(e) => setSelectedPharmacy({ ...selectedPharmacy, refillDate: e.target.value })}
+                  id='refill_date'
+                  value={selectedPharmacy.refill_date}
+                  onChange={(e) => setSelectedPharmacy({ ...selectedPharmacy, refill_date: e.target.value })}
                 />
               </div>
               <div>
-                <label htmlFor='prescriptionNumber'>Prescription Number:</label>
+                <label htmlFor='prescription_number'>Prescription Number:</label>
                 <input
                   type='text'
-                  id='prescriptionNumber'
-                  value={selectedPharmacy.prescriptionNumber}
+                  id='prescription_number'
+                  value={selectedPharmacy.prescription_number}
                   onChange={(e) =>
-                    setSelectedPharmacy({ ...selectedPharmacy, prescriptionNumber: e.target.value })
+                    setSelectedPharmacy({ ...selectedPharmacy, prescription_number: e.target.value })
                   }
                 />
               </div>

@@ -9,11 +9,11 @@ import './css/navbar.css';
 const PharmacyRegistration = () => {
     const [showViewPharmacy, setShowViewPharmacy] = useState(false);
   const [newPharmacy, setNewPharmacy] = useState({
-    patientId: '',
-    medicationName: '',
+    patient_id: '',
+    medication_name: '',
     dosage: '',
-    refillDate: '',
-    prescriptionNumber: ''
+    refill_date: '',
+    prescription_number: ''
   });
 
   const [patientExists, setPatientExists] = useState(false);
@@ -25,7 +25,7 @@ const PharmacyRegistration = () => {
 
   const checkPatientExists = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/patient/${newPharmacy.patientId}`);
+      const response = await axios.get(`http://localhost:8080/patient/${newPharmacy.patient_id}`);
       setPatientExists(response.data !== null);
     } catch (error) {
       console.error('Error checking patient existence:', error);
@@ -43,11 +43,11 @@ const PharmacyRegistration = () => {
     try {
       await axios.post('http://localhost:8080/pharmacy', newPharmacy);
       setNewPharmacy({
-        patientId: '',
-        medicationName: '',
+        patient_id: '',
+        medication_name: '',
         dosage: '',
-        refillDate: '',
-        prescriptionNumber: ''
+        refill_date: '',
+        prescription_number: ''
       });
     } catch (error) {
       console.error('Error creating pharmacy:', error);
@@ -90,10 +90,10 @@ const PharmacyRegistration = () => {
             <div className="form-wrapper">
               <input
                 type="text"
-                name="patientId"
+                name="patient_id"
                 placeholder="Patient ID"
                 className="form-control"
-                value={newPharmacy.patientId}
+                value={newPharmacy.patient_id}
                 onChange={handleInputChange}
                 onBlur={checkPatientExists} // Trigger patient existence check onBlur
                 required
@@ -103,10 +103,10 @@ const PharmacyRegistration = () => {
 
               <input
                 type="text"
-                name="medicationName"
+                name="medication_name"
                 placeholder="Medication Name"
                 className="form-control"
-                value={newPharmacy.medicationName}
+                value={newPharmacy.medication_name}
                 onChange={handleInputChange}
                 required
               />
@@ -123,20 +123,20 @@ const PharmacyRegistration = () => {
 
               <input
                 type="text"
-                name="refillDate"
+                name="refill_date"
                 placeholder="Refill Date"
                 className="form-control"
-                value={newPharmacy.refillDate}
+                value={newPharmacy.refill_date}
                 onChange={handleInputChange}
                 required
               />
 
               <input
                 type="text"
-                name="prescriptionNumber"
+                name="prescription_number"
                 placeholder="Prescription Number"
                 className="form-control"
-                value={newPharmacy.prescriptionNumber}
+                value={newPharmacy.prescription_number}
                 onChange={handleInputChange}
                 required
               />
