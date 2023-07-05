@@ -6,9 +6,6 @@ import { auth , firebase } from './firebase';
 import { BrowserRouter as Router,Route, Link , Routes ,Navigate} from "react-router-dom";
 import PatientManagement from './patient';
 import Dashboard from './Page/Dashboard/EmpDash';
-import CreateRecord from './CreateRecord';
-import EditRecord from './EditRecord';
-import ViewRecord from './ViewRecord';
 import RecordList from './RecordList';
 import PharmacyRegistration from './Pharmacy';
 import Inventory from './Inventory';
@@ -107,10 +104,7 @@ return (
         <Route path = "/Dashboard/Staff" element={<Dashboard/>}></Route>
         <Route path='/Dashboard/emr' element={<RecordList />}></Route>
         <Route path='/Dashboard/pharmacy' element={<PharmacyRegistration/>}></Route>
-        <Route path='/create' element={<CreateRecord />}></Route>
-        <Route path='/view/:id' element={<ViewRecord />}></Route>
-        <Route path='/edit/:id' element={<EditRecord />}></Route>
-        <Route path="*" element={<h2>Page Not Found</h2>}></Route>
+        <Route path="/Dashboard/emr" element={<RecordList/>}></Route>        
         <Route path="/Dashboard/Inventory" element ={<Inventory/>}></Route>
     </Routes>
 </Router>

@@ -1,0 +1,175 @@
+.back-btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: #dc3545;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .back-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .back-btn:active {
+    background-color: #bd2130;
+  }
+  
+  .back-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+  }
+  
+  .continue-btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 2em;
+  }
+  
+  .continue-btn:hover {
+    background-color: #0069d9;
+  }
+  
+  .continue-btn:active {
+    background-color: #0062cc;
+  }
+  
+  .continue-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+  
+  .edit-btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .edit-btn:hover {
+    background-color: #218838;
+  }
+  
+  .edit-btn:active {
+    background-color: #1e7e34;
+  }
+  
+  .edit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+  }
+  
+  .view-btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .view-btn:hover {
+    background-color: #0069d9;
+  }
+  
+  .view-btn:active {
+    background-color: #0062cc;
+  }
+  
+  .view-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+  
+
+  .record-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+  .section {
+    margin-bottom: 24px;
+  }
+  
+  .section-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .record-heading {
+    color: #007bff;
+  }
+  
+  .patient-heading {
+    color: #28a745;
+  }
+  
+  .doctor-heading {
+    color: #dc3545;
+  }
+  
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  
+  .row {
+    display: flex;
+    margin-bottom: 12px;
+  }
+  
+  .label {
+    flex-basis: 200px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .value {
+    flex-grow: 1;
+    color: #777;
+  }
+  
+  .separator {
+    height: 1px;
+    background-color: #ccc;
+    margin: 16px 0;
+  }
+  
+  .record-details,
+  .patient-details,
+  .doctor-details {
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    padding: 16px;
+  }
+  
