@@ -25,7 +25,8 @@ const CreateRecord = () => {
             prescription: prescription,
             notes: notes
         }
-        await axios.post('http://localhost:8080/medical-records', record).then((response) => {
+        try{
+            await axios.post('http://localhost:8080/medical-records', record).then((response) => {
             console.log(response.data);
             Swal.fire({
                 icon: 'success',
@@ -34,7 +35,11 @@ const CreateRecord = () => {
                 timer: 1500
             })
             navigate('/Dashboard/emr');
-        })
+        })}
+        catch(error){
+            console.error('Error creating emr:', error);
+        }
+
     }
     const validate = async () => {
         var a = false, b = false;
@@ -49,7 +54,7 @@ const CreateRecord = () => {
                     console.log("Patient found with id : " + patientId)
                 }
             })
-            await axios.get(`http://localhost:8080/staff/doctor/${doctorId}`).then((response) => {
+            await axios.get(`http://localhost:8080/staff/${doctorId}`).then((response) => {
                 console.log(response);
                 if (!response.data) {
                     b = false;
@@ -141,7 +146,7 @@ const CreateRecord = () => {
                                             <div className="col-lg-12">
                                                 <div className="form-group mt-3">
                                                     <button className="btn btn-success m-2" type="submit">Save</button>
-                                                    <Link to="/" className="btn btn-danger m-2">Back</Link>
+                                                    <Link to="/Dashboard/emr" className="btn btn-danger m-2">Back</Link>
                                                 </div>
                                             </div>
                                         </>

@@ -15,6 +15,9 @@ const emr=()=>{
 const pharm=()=>{
   nav("/Dashboard/pharmacy")
 }
+const Inventory = () => {
+  nav("/Dashboard/Inventory");
+};
 return(
 
 <div className='bodyc'>    
@@ -68,7 +71,7 @@ return(
       </div>
     </div>
 
-    <div class="ag-courses_item">
+    <div class="ag-courses_item" onClick={Inventory}>
       <div class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 

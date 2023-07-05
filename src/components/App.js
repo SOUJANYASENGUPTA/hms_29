@@ -11,6 +11,7 @@ import EditRecord from './EditRecord';
 import ViewRecord from './ViewRecord';
 import RecordList from './RecordList';
 import PharmacyRegistration from './Pharmacy';
+import Inventory from './Inventory';
 function App() {
   const [viewOtpForm, setViewOtpForm] = useState(false);
   const [ver,setVer] = useState(false);
@@ -110,6 +111,7 @@ return (
         <Route path='/view/:id' element={<ViewRecord />}></Route>
         <Route path='/edit/:id' element={<EditRecord />}></Route>
         <Route path="*" element={<h2>Page Not Found</h2>}></Route>
+        <Route path="/Dashboard/Inventory" element ={<Inventory/>}></Route>
     </Routes>
 </Router>
     );
